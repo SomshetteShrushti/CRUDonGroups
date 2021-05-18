@@ -140,13 +140,13 @@ namespace CRUDOPerationsOnGroups
         /// <param name="e"></param>
         private void button6_Click(object sender, EventArgs e)
         {
-            using (ClientContext ctx = new ClientContext("http://hr.zubaircorp.com/"))
+            using (ClientContext ctx = new ClientContext("URL"))
             {
                 Web web = ctx.Web;
                 GroupCollection groups = web.SiteGroups;
                 Group group = groups.GetByName("HOD");
                 UserCollection users = group.Users;
-                group.Users.RemoveByLoginName(@"zubaircorp\hrmsemployee");
+                group.Users.RemoveByLoginName(@"domain\hrmsemployee");
                 ctx.ExecuteQuery();
             }
             MessageBox.Show("User Removed Sucessfully");
@@ -158,7 +158,7 @@ namespace CRUDOPerationsOnGroups
         /// <param name="e"></param>
         private void button7_Click(object sender, EventArgs e)
         {
-            using (ClientContext ctx = new ClientContext("http://hr.zubaircorp.com/"))
+            using (ClientContext ctx = new ClientContext("URL"))
             {
                 Web web = ctx.Web;
                 GroupCreationInformation groupCreation = new GroupCreationInformation();
@@ -175,7 +175,7 @@ namespace CRUDOPerationsOnGroups
         /// <param name="e"></param>
         private void button8_Click(object sender, EventArgs e)
         {
-            using (ClientContext ctx = new ClientContext("http://hr.zubaircorp.com/"))
+            using (ClientContext ctx = new ClientContext("URL"))
             {
                 Web web = ctx.Web;
                 Group group = web.SiteGroups.GetByName("Testing123");
@@ -192,7 +192,7 @@ namespace CRUDOPerationsOnGroups
         /// <param name="e"></param>
         private void button9_Click(object sender, EventArgs e)
         {
-            using (ClientContext ctx = new ClientContext("http://hr.zubaircorp.com/"))
+            using (ClientContext ctx = new ClientContext("URL"))
             {
                 Web web = ctx.Web;
                 Group group = web.SiteGroups.GetByName("Testing34");
