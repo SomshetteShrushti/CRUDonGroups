@@ -1,0 +1,11 @@
+This program contains following operations
+
+1. creating group
+2. Updating Group Name
+3. Deleting/Removing group
+4. Retriving perticular group
+5. Retriving all groups and users present in the group.
+6. Adding users to the group
+7. Updating user info in the group
+8. Retriving user info from group
+9. Removing user from the list
